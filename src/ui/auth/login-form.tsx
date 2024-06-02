@@ -12,8 +12,8 @@ export default function LoginForm() {
                 </h1>
                 <div>
                     <div>
-                        <label htmlFor="password">
-                            Email
+                        <label htmlFor="email">
+                            Email admin@mydomain.com
                         </label>
                     </div>
                     <div>
