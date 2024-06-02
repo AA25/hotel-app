@@ -1,6 +1,7 @@
 import {
     signIn,
-    signOut
+    signOut,
+    confirmSignIn
 } from "aws-amplify/auth";
 import { redirect } from "next/navigation";
 
@@ -10,10 +11,15 @@ export async function handleSignIn(
 ) {
     let redirectLink = "/admin";
     try {
-        await signIn({
+        const { isSignedIn, nextStep } = await signIn({
             username: String(formData.get("email")),
             password: String(formData.get("password")),
         });
+        if(nextStep.signInStep === "CONFIRM_SIGN_IN_WITH_NEW_PASSWORD_REQUIRED") {
+            await confirmSignIn({
+                challengeResponse: "1234567",
+            })
+        }
     } catch (error) {
         console.log(error);
         return "handleSignIn error";
