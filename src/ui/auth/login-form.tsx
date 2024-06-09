@@ -60,7 +60,7 @@ function LoginButton() {
     const { pending } = useFormStatus();
 
     return (
-        <button className="mt-4 w-full" aria-disabled={pending}>
+        <button className="" aria-disabled={pending}>
             Log in
         </button>
     );
