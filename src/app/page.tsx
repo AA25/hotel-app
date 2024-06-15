@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
+import { Button } from "react-bootstrap";
 
 export default function Home() {
   return (
@@ -8,13 +9,13 @@ export default function Home() {
               Welcome, please sign in.
           </div>
           <Link href="/auth/login">
-              <button> Sign in </button>
+              <Button> Sign in </Button>
           </Link>
           <div>
               Or sign up
           </div>
           <Link href="/auth/signup">
-              <button> Sign up</button>
+              <Button> Sign up</Button>
           </Link>
       </main>
   );
