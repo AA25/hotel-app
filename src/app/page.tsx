@@ -6,7 +6,9 @@ export default function Home() {
   return (
       <main>
           <div>
-              Welcome, please sign in.
+              <h1>
+                Welcome, please sign in.
+              </h1>
           </div>
           <Link href="/auth/login">
               <Button> Sign in </Button>
