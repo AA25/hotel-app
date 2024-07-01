@@ -1,10 +1,10 @@
 name: testing
 
-on: push
+on: issue_comment
 
 jobs:
   build:
-#    if: ${{ github.event.issue.pull_request }}
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
