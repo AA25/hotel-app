@@ -1,8 +1,6 @@
 name: testing
 
-on:
-  issue_comment:
-    types: [created, edited, deleted]
+on: push
 
 jobs:
   build:
