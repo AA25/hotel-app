@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    if: ${{ github.event.issue.pull_request }}
+#    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
