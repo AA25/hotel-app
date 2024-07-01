@@ -1,7 +1,7 @@
 name: testing
 
 on:
-  pull_request_review_comment:
+  issue_comment:
     types: [created]
 
 jobs:
@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-#        if: contains(github.event.comment.html_url, '/deploy')
         uses: actions/checkout@v4
       - name: use node.js
         uses: actions/setup-node@v4
