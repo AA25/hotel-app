@@ -50,16 +50,16 @@ export default function AddHotelForm() {
                     required
                 />
             </div>
-            {/*<div className="mb-3">*/}
-            {/*    <label htmlFor={"hotelPhoto"} className="form-label">Upload Photo</label>*/}
-            {/*    <input*/}
-            {/*        id="hotelPhoto"*/}
-            {/*        className="form-control"*/}
-            {/*        type="file"*/}
-            {/*        name="hotelPhoto"*/}
-            {/*        required*/}
-            {/*    />*/}
-            {/*</div>*/}
+            <div className="mb-3">
+                <label htmlFor={"hotelPhoto"} className="form-label">Upload Photo</label>
+                <input
+                    id="hotelPhoto"
+                    className="form-control"
+                    type="file"
+                    name="hotelPhoto"
+                    required
+                />
+            </div>
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
     );

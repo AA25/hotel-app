@@ -8,7 +8,7 @@ export async function handleAddHotel (
         const  cognitoTokens = (await fetchAuthSession()).tokens;
         let rawIdToken = cognitoTokens?.idToken?.toString();
 
-        const response = await fetch('https://wimy1lf81d.execute-api.eu-west-2.amazonaws.com/test', {
+        const response = await fetch('https://wimy1lf81d.execute-api.eu-west-2.amazonaws.com/test/{admin+}', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${rawIdToken}`,
